@@ -40,7 +40,7 @@ const jim = new User({
 User.deleteMany({})
 	.then(() => jim.save());
 
-Apparel.deleteMany({})
+Professor.deleteMany({})
 	.then(() => sallyJohnson.save())
 	.then(() => jamesDean.save())
 	.then(() => amyJones.save())
