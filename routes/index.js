@@ -6,12 +6,14 @@ const userController = require('../controllers/userController');
 
 router.get('/', appController.index);
 
+// User routes
 router.get('/users/', userController.index);
 router.post('/users/', userController.create);
 router.get('/users/:userId/', userController.show);
 router.put('/users/:userId/', userController.update);
 router.delete('/users/:userId/', userController.delete);
 
+// Professor routes
 router.get('/professors/', professorController.index);
 router.post('/professors/', professorController.create);
 router.get('/professors/:professorId/', professorController.show);

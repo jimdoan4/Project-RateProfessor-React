@@ -9,6 +9,7 @@ import { faChild } from "@fortawesome/free-solid-svg-icons";
 import { Form } from "react-bootstrap";
 
 export default class Professors extends Component {
+        // We'll set up the  array as an empty array to begin with
   state = {
     professors: [],
     newProfessor: {
@@ -26,7 +27,7 @@ export default class Professors extends Component {
     this.getAllProfessors();
   };
 
-  getAllProfessors = () => {
+  getAllProfessors = () => {  // When the page loads, grab all professors from the database
     axios.get(`/api/professors/`).then(res => {
       this.setState({ professors: res.data });
     });
@@ -35,7 +36,7 @@ export default class Professors extends Component {
   createProfessor = e => {
     e.preventDefault();
     axios
-      .post(`/api/professors`, {
+      .post(`/api/professors`, {   // Ask the server to create a new professor in the database
         name: this.state.newProfessor.name,
         course: this.state.newProfessor.course,
         image: this.state.newProfessor.image,
@@ -43,7 +44,7 @@ export default class Professors extends Component {
         school: this.state.newProfessor.school
       })
       .then(res => {
-        const professorsList = [...this.state.professors];
+        const professorsList = [...this.state.professors];   // Copy the old professors list into a new one
         professorsList.unshift(res.data);
         this.setState({
           newProfessor: {
@@ -59,7 +60,7 @@ export default class Professors extends Component {
       });
   };
 
-  toggleProfessorForm = () => {
+  toggleProfessorForm = () => {  // This toggle the professor button when clicked
     this.setState((state, props) => {
       return { displayProfessorForm: !state.displayProfessorForm };
     });
