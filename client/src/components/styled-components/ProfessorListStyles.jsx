@@ -1,7 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
-import { fadeInDown } from "react-animations";
 
-export const fadeIn = keyframes`${fadeInDown}`;
+
 
 export const ProfessorListContainer = styled.div`
    display: flex;

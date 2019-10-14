@@ -76,13 +76,13 @@ export default class Professors extends Component {
     return (
       <div id="event">
         <div
-          class="container-fluid text-center"
+          className="container-fluid text-center"
           style={{ marginBottom: "20px", marginTop: "110px" }}
         >
           <button className="review-button" onClick={this.toggleProfessorForm}>
             <FontAwesomeIcon
               icon={faChild}
-              class="card-img-top"
+              className="card-img-top"
               style={{ width: "2rem" }}
             />
             Review a Professor
@@ -167,10 +167,7 @@ export default class Professors extends Component {
         <ProfessorListContainer>
           {this.state.professors.map(professor => {
             return (
-              <Container className="container-fluid">
-                {/* <Row>
-							<Col sm={8}> */}
-
+              <Container style={{marginBottom: "130px"}}>
                 <Card
                   key={professor._id}
                   className="text-center"
@@ -183,7 +180,7 @@ export default class Professors extends Component {
                     <Card.Img
                       variant="tops"
                       src={professor.image}
-                      class="card-img-top"
+                      className="card-img-top"
                     />
                   </Link>
                   <Card.Body>
@@ -201,8 +198,7 @@ export default class Professors extends Component {
                     </Card.Text>
                   </Card.Body>
                 </Card>
-                {/* </Col>
-									</Row> */}
+           
               </Container>
             );
           })}

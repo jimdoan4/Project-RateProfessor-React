@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-export const NavContainer = styled.div`
-
+export const NavContainer = styled.div `
 #navbar {
     padding: 15px 25px;
   border: none;
@@ -45,3 +44,4 @@ export const NavContainer = styled.div`
   margin-right: auto;
   text-align: center;
 } 
+`

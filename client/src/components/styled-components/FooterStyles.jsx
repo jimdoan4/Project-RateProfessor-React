@@ -1,7 +1,9 @@
-import styled, { keyframes, css } from 'styled-components'
+import styled, {
+  css
+} from 'styled-components'
 
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.div `
   padding: 20px;
   background: #394475;
   color: white;
