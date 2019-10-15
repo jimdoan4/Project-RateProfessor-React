@@ -50,7 +50,6 @@ export default class Nav extends Component {
             </ul>
           </div>
         </nav>
-
         <nav
           id="navbar"
           className="navbar navbar-expand-lg navbar-dark fixed-top"
