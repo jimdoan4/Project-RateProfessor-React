@@ -142,7 +142,7 @@ export default class Professors extends Component {
               </Form.Group>
 
               <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Product Description</Form.Label>
+                <Form.Label>Review of Course and Professor</Form.Label>
                 <Form.Control
                   as="textarea"
                   type="text"
